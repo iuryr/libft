@@ -37,17 +37,18 @@ SRC_FILES = ft_putchar_fd.c \
 			ft_putnbr_fd.c \
 			ft_striteri.c \
 			ft_strmapi.c \
-			ft_itoa.c
-
-BONUS_FILES = ft_lstnew_bonus.c \
-			  ft_lstadd_front_bonus.c \
-			  ft_lstsize_bonus.c \
-			  ft_lstlast_bonus.c \
-			  ft_lstadd_back_bonus.c \
-			  ft_lstdelone_bonus.c \
-			  ft_lstclear_bonus.c \
-			  ft_lstiter_bonus.c \
-			  ft_lstmap_bonus.c
+			ft_itoa.c \
+			ft_lstnew_bonus.c \
+		 	ft_lstadd_front_bonus.c \
+		  	ft_lstsize_bonus.c \
+		  	ft_lstlast_bonus.c \
+		  	ft_lstadd_back_bonus.c \
+		  	ft_lstdelone_bonus.c \
+		  	ft_lstclear_bonus.c \
+		  	ft_lstiter_bonus.c \
+		  	ft_lstmap_bonus.c \
+			get_next_line_bonus.c \
+			get_next_line_utils_bonus.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 BONUS_OBJ_FILES = $(BONUS_FILES:.c=.o)
@@ -74,8 +75,8 @@ re: fclean $(NAME)
 bonus: $(BONUS_OBJ_FILES)
 
 test_%: $(NAME)
-	$(CC) $(FLAGS) -L. -o $@.out $@.c -lbsd -l:$(NAME) -g3 
-	./$@.out
+	$(CC) $(FLAGS) -L. -o ./tests/$@.out ./tests/$@.c -lbsd -l:$(NAME) -g3 
+	./tests/*.out
 
 rmtests:
 	rm -f *.out
