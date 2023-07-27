@@ -6,23 +6,11 @@
 /*   By: iusantos <iusantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 11:54:04 by iusantos          #+#    #+#             */
-/*   Updated: 2023/06/11 09:53:57 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/07/27 14:53:39 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
-
-size_t	gnl_strlen(char *s1)
-{
-	size_t	counter;
-
-	if (s1 == NULL)
-		return (0);
-	counter = 0;
-	while (s1[counter] != '\0')
-		counter++;
-	return (counter);
-}
+#include "libft.h"
 
 char	*gnl_strjoin(char *s1, char *s2)
 {
@@ -37,7 +25,7 @@ char	*gnl_strjoin(char *s1, char *s2)
 		*s1 = '\0';
 	}
 	og_s1 = s1;
-	ret_str_len = gnl_strlen(s1) + gnl_strlen(s2) + 1;
+	ret_str_len = ft_strlen(s1) + ft_strlen(s2) + 1;
 	ret_str = (char *) malloc(ret_str_len * sizeof(char));
 	real_ret_str = ret_str;
 	while (*s1 != '\0')

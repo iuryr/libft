@@ -6,11 +6,11 @@
 /*   By: iusantos <iusantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 11:53:31 by iusantos          #+#    #+#             */
-/*   Updated: 2023/06/11 09:52:18 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/07/27 14:53:37 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "libft.h"
 
 char	*read_enough(int fd, char *output_buffer)
 {
@@ -51,7 +51,7 @@ char	*extract_retstr(char *output_buffer)
 	newline_pos = find_first_newline(output_buffer);
 	if (newline_pos != -1)
 		size = newline_pos + 2;
-	size = gnl_strlen(output_buffer) + 1;
+	size = ft_strlen(output_buffer) + 1;
 	retstr = (char *) malloc(size * sizeof(char));
 	real_retstr = retstr;
 	while (*output_buffer != '\n' && *output_buffer != '\0')
@@ -84,7 +84,7 @@ char	*update_remainder(char	*output_buffer)
 	else
 	{
 		remainder = (char *) malloc(
-				(gnl_strlen(output_buffer) - nl_pos) * sizeof(char));
+				(ft_strlen(output_buffer) - nl_pos) * sizeof(char));
 		real_remainder = remainder;
 		while (*output_buffer != '\n')
 			output_buffer++;
@@ -105,7 +105,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 	if (find_first_newline(output_buffer[fd]) == -1 || !output_buffer[fd])
 		output_buffer[fd] = read_enough(fd, output_buffer[fd]);
-	if (gnl_strlen(output_buffer[fd]) != 0)
+	if (ft_strlen(output_buffer[fd]) != 0)
 		return_string = extract_retstr(output_buffer[fd]);
 	else
 		return (NULL);
