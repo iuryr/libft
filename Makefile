@@ -48,7 +48,13 @@ SRC_FILES = ft_putchar_fd.c \
 		  	ft_lstiter_bonus.c \
 		  	ft_lstmap_bonus.c \
 			get_next_line_bonus.c \
-			get_next_line_utils_bonus.c
+			get_next_line_utils_bonus.c \
+			ft_printf.c \
+			ft_printf_csint_utils.c \
+			ft_printf_hex_utils.c \
+			ft_printf_uint_utils.c \
+			ft_printf_voidp_utils.c
+
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 BONUS_OBJ_FILES = $(BONUS_FILES:.c=.o)

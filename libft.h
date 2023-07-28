@@ -6,7 +6,7 @@
 /*   By: iusantos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 09:10:21 by iusantos          #+#    #+#             */
-/*   Updated: 2023/07/27 14:49:22 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/07/28 11:11:09 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -75,5 +76,30 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 char	*get_next_line(int fd);
 char	*gnl_strjoin(char *s1, char *s2);
 int		find_first_newline(char *s1);
+
+/**** ft_printf ****/
+int		ft_printf(const char *format, ...);
+size_t	print_accordingly(char c, va_list args);
+/* %c and %%*/
+size_t	prtf_putchar(char c);
+/* %s */
+size_t	prtf_putstr(char *str);
+/* %d and %i */
+size_t	print_int(int nbr);
+void	write_str(long n, char *str, size_t length);
+/*  %u */
+char	*ft_uitoa(unsigned int n);
+size_t	print_uint(unsigned int nbr);
+/*  %x and %X */
+void	write_hex_str(unsigned long n, char *str, size_t length, char c);
+char	*uitohex(unsigned long n, char c);
+size_t	print_hex(unsigned long n, char c);
+/*  %p */
+void	write_pref_hex_str(unsigned long n, char *str, size_t length);
+char	*ultoa(unsigned long n);
+size_t	print_voidp(unsigned long p);
+/* utils */
+size_t	count_digit_base(unsigned long n, unsigned int base);
+
 
 #endif
