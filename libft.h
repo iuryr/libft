@@ -6,7 +6,7 @@
 /*   By: iusantos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 09:10:21 by iusantos          #+#    #+#             */
-/*   Updated: 2023/07/28 11:11:09 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/08/02 11:42:19 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,5 @@ char	*ultoa(unsigned long n);
 size_t	print_voidp(unsigned long p);
 /* utils */
 size_t	count_digit_base(unsigned long n, unsigned int base);
-
 
 #endif
