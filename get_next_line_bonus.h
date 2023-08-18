@@ -6,7 +6,7 @@
 /*   By: iusantos <iusantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 11:53:46 by iusantos          #+#    #+#             */
-/*   Updated: 2023/06/11 09:54:35 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/08/18 15:16:06 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
+#  define BUFFER_SIZE 4096
 # endif //BUFFER_SIZE
 
 # include <unistd.h>
