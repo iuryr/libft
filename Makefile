@@ -53,7 +53,8 @@ SRC_FILES = ft_putchar_fd.c \
 			ft_printf_csint_utils.c \
 			ft_printf_hex_utils.c \
 			ft_printf_uint_utils.c \
-			ft_printf_voidp_utils.c
+			ft_printf_voidp_utils.c \
+			ft_count_word.c
 
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
