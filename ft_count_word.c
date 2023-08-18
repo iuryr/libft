@@ -6,10 +6,9 @@
 /*   By: iusantos <iusantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:47:55 by iusantos          #+#    #+#             */
-/*   Updated: 2023/08/18 15:48:11 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/08/18 18:28:29 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 int	count_word(const char *s, char c)
 {

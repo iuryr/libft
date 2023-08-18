@@ -6,7 +6,7 @@
 /*   By: iusantos <iusantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 11:53:31 by iusantos          #+#    #+#             */
-/*   Updated: 2023/07/27 14:53:37 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/08/18 18:09:22 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ char	*extract_retstr(char *output_buffer)
 	newline_pos = find_first_newline(output_buffer);
 	if (newline_pos != -1)
 		size = newline_pos + 2;
-	size = ft_strlen(output_buffer) + 1;
+	else
+		size = ft_strlen(output_buffer) + 1;
 	retstr = (char *) malloc(size * sizeof(char));
 	real_retstr = retstr;
 	while (*output_buffer != '\n' && *output_buffer != '\0')
