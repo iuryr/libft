@@ -15,26 +15,28 @@
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
-	char	**return_split;
 	int		nbr_words;
 	int		i;
 	int		size;
 
 	nbr_words = count_word(s, c);
 	split = ft_calloc(nbr_words + 1, sizeof (char *));
-	return_split = split;
 	if (split == NULL)
 		return (NULL);
 	if (!*s)
 		return (split);
 	i = -1;
+	while (*s == c)
+		s++;
 	while (++i < nbr_words)
 	{
 		size = ft_strchr(s, c) - s;
+		if (ft_strchr(s, c) == NULL)
+			size = ft_strchr(s, '\0') - s;
 		*split++ = ft_substr(s, 0, size);
 		s += size;
-		while (*s == c)
+		while (*s == c && *s != '\0')
 			s++;
 	}
-	return (return_split);
+	return (split - nbr_words);
 }
