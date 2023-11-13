@@ -26,6 +26,7 @@ SRC_FILES = ft_putchar_fd.c \
 			ft_strncmp.c \
 			ft_strnstr.c \
 			ft_atoi.c \
+			ft_atol.c \
 			ft_strlcpy.c \
 			ft_strlcat.c \
 			ft_strdup.c \
