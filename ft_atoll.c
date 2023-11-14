@@ -6,7 +6,7 @@
 /*   By: iusantos <iusantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:15:46 by iusantos          #+#    #+#             */
-/*   Updated: 2023/11/14 15:16:19 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/11/14 15:38:42 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	ft_isspace(int c)
 		return (0);
 }
 
-int	ft_atoll(const char *nptr)
+long long	ft_atoll(const char *nptr)
 {
 	int			sign;
 	long long	number;
