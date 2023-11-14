@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atol.c                                          :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iusantos <iusantos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 10:35:12 by iusantos          #+#    #+#             */
-/*   Updated: 2023/11/14 15:17:13 by iusantos         ###   ########.fr       */
+/*   Created: 2023/11/14 15:15:46 by iusantos          #+#    #+#             */
+/*   Updated: 2023/11/14 15:16:19 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ static int	ft_isspace(int c)
 		return (0);
 }
 
-int	ft_atol(const char *nptr)
+int	ft_atoll(const char *nptr)
 {
-	int		sign;
-	long	number;
+	int			sign;
+	long long	number;
 
 	sign = 1;
 	number = 0;
