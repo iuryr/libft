@@ -6,7 +6,7 @@
 /*   By: iusantos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 09:10:21 by iusantos          #+#    #+#             */
-/*   Updated: 2023/08/18 18:29:19 by iusantos         ###   ########.fr       */
+/*   Updated: 2023/11/14 15:27:38 by iusantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
+int		ft_atoll(const char *nptr);
+int		ft_atol(const char *nptr);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strdup(const char *s);
