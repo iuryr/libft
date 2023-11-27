@@ -1,8 +1,8 @@
 NAME = libft.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -c
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -c -O3
+FLAGS = -Wall -Wextra -Werror -O3
 
 SRC_FILES = ft_putchar_fd.c \
 			ft_putstr_fd.c \
