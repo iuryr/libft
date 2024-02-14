@@ -71,12 +71,12 @@ all: $(NAME)
 
 $(NAME): $(OBJ_FILES)
 
-%.o : %.c 
-	$(CC) $(CFLAGS) $< -o $@
-	ar -crs $(NAME) $@
+%.o : %.c
+	@$(CC) $(CFLAGS) $< -o $@
+	@ar -crs $(NAME) $@
 
 clean:
-	rm -f *.o
+	@rm -f *.o
 
 fclean: clean
 	rm -f $(NAME)
@@ -86,7 +86,7 @@ re: fclean $(NAME)
 bonus: $(BONUS_OBJ_FILES)
 
 test_%: $(NAME)
-	$(CC) $(FLAGS) -L. -o ./tests/$@.out ./tests/$@.c -lbsd -l:$(NAME) -g3 
+	$(CC) $(FLAGS) -L. -o ./tests/$@.out ./tests/$@.c -lbsd -l:$(NAME) -g3
 	./tests/*.out
 
 rmtests:

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_notspace.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julberna <julberna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Juliany Bernardo <julberna@student.42sp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 18:56:07 by julberna          #+#    #+#             */
-/*   Updated: 2024/01/11 18:56:10 by julberna         ###   ########.fr       */
+/*   Updated: 2024/02/13 22:01:59 by Juliany Ber      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_notspace(int c)
 {
-	if (c > 32 && c < 127)
+	if (c < 0 || (c > 0 && c < 7) || (c > 13 && c < 32) || c > 32)
 		return (1);
 	return (0);
 }
